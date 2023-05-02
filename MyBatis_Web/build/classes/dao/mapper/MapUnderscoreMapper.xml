@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.face.MapUnderscoreDao">
+
+	<!-- <select id="selectAll" resultType="dto.Underscore"> -->
+	<!-- SELECT -->
+	<!-- user_id AS userId, -->
+	<!-- user_pw AS userPw -->
+	<!-- FROM underscore -->
+	<!-- ORDER BY user_id -->
+	<!-- </select> -->
+
+	<!-- *********************************************************** -->
+
+
+<!-- 	<resultMap type="dto.Underscore" id="MapUnderscore"> -->
+
+<!-- 		<result column="user_id" property="userId" /> -->
+<!-- 		<result column="user_pw" property="userPw" /> -->
+
+<!-- 	</resultMap> -->
+
+<!-- 	<select id="selectAll" resultMap="MapUnderscore"> -->
+<!-- 		SELECT -->
+<!-- 		user_id, -->
+<!-- 		user_pw -->
+<!-- 		FROM underscore -->
+<!-- 		ORDER BY user_id -->
+<!-- 	</select> -->
+
+	<!-- *********************************************************** -->
+
+	<!-- Configuration설정의 mapUnderScoreToCamelCase설정값으로 해결하기 -->
+	<!-- Mapper에서 따로 변경할 것이 없다 -->
+	
+<!-- 	<select id="selectAll" resultType="dto.Underscore"> -->
+<!-- 	<select id="selectAll" resultType="U"> -->
+<!-- 	<select id="selectAll" resultType="Underscore"> -->
+	<select id="selectAll" resultType="Under">
+		SELECT
+			user_id AS userId,
+			user_pw AS userPw
+		FROM underscore
+		ORDER BY user_id
+	</select>
+
+	<!-- *********************************************************** -->
+
+	
+
+
+
+</mapper>
